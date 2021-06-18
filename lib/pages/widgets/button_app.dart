@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-
-class ButtomCustomStack extends StatelessWidget {
-  const ButtomCustomStack({
+class ButtonCustomStack extends StatelessWidget {
+  const ButtonCustomStack({
     Key? key,
     required bool isCompleted,
     required Color colorBackground,
@@ -30,16 +29,20 @@ class ButtomCustomStack extends StatelessWidget {
       child: (_isCompleted || _isFirst)
           ? Icon(
               _icon,
-              color: _isFirst
-                  ? _isCompleted
-                      ? Colors.black
-                      : Colors.white
-                  : _isCompleted
-                      ? Colors.white
-                      : Colors.black,
+              color: getColor(
+                isFirst: _isFirst,
+                isCompleted: _isCompleted,
+              ),
               size: 30,
             )
           : null,
     );
+  }
+
+  Color getColor({required bool isFirst, required bool isCompleted}) {
+    if (isFirst) {
+      return isCompleted ? Colors.black : Colors.white;
+    }
+    return isCompleted ? Colors.white : Colors.black;
   }
 }

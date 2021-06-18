@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 
 
 void main() {
-  runApp(MyApp());
+  runApp(EntryApp());
 }
 
-class MyApp extends StatelessWidget {
+class EntryApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Buttom App Custom',
       theme: ThemeData(
           primarySwatch: Colors.blue,
           buttonTheme: ButtonThemeData(shape: CircleBorder())),
@@ -18,4 +18,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

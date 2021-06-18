@@ -29,15 +29,18 @@ class HomePageState extends State<HomePage>
       ..addListener(() {
         setState(() {});
       });
-    _rotateIcon = Tween(begin: 0.0, end: (math.pi) / 4).animate(_controller)
+    _rotateIcon = Tween(begin: 0.0, end: (math.pi) / 4)
+    .animate(_controller)
       ..addListener(() {
         setState(() {});
       });
-    _colorChange = ColorTween(begin: Color(0xff6735E7), end: Colors.white)
-        .animate(_controller)
-          ..addListener(() {
-            setState(() {});
-          });
+    _colorChange = ColorTween(
+      begin: Color(0xff6735E7),
+      end: Colors.white,
+    ).animate(_controller)
+      ..addListener(() {
+        setState(() {});
+      });
   }
 
   @override
@@ -49,14 +52,14 @@ class HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xffF7F4FB),
       floatingActionButton: Stack(
         clipBehavior: Clip.none,
         children: [
           Positioned(
             top: -20 * math.sin(_controller.value * math.pi / 2) + 20,
             left: -80 * math.sin(_controller.value * math.pi / 2),
-            child: ButtomCustomStack(
+            child: ButtonCustomStack(
               isCompleted: _controller.isCompleted,
               icon: CupertinoIcons.videocam_fill,
               colorBackground: Color(0xffF09190),
@@ -65,7 +68,7 @@ class HomePageState extends State<HomePage>
           Positioned(
             top: -80 * math.sin(_controller.value * math.pi / 2) + 10,
             left: -50 * math.sin(_controller.value * math.pi),
-            child: ButtomCustomStack(
+            child: ButtonCustomStack(
               isCompleted: _controller.isCompleted,
               icon: CupertinoIcons.camera_fill,
               colorBackground: Color(0xffBC54F7),
@@ -74,7 +77,7 @@ class HomePageState extends State<HomePage>
           Positioned(
             top: -80 * math.sin(_controller.value * math.pi),
             left: 80 * math.sin((_rotateButton.value) * math.pi),
-            child: ButtomCustomStack(
+            child: ButtonCustomStack(
               isCompleted: _controller.isCompleted,
               colorBackground: Color(0xff6735E7),
               icon: CupertinoIcons.photo_fill,
@@ -90,7 +93,7 @@ class HomePageState extends State<HomePage>
             },
             child: Transform.rotate(
               angle: _rotateIcon.value,
-              child: ButtomCustomStack(
+              child: ButtonCustomStack(
                 colorBackground: _colorChange.value!,
                 icon: CupertinoIcons.add,
                 isCompleted: _controller.isCompleted,
