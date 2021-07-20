@@ -1,12 +1,16 @@
-# Custom Bottom App
+# Ui Clone em flutter de uma rede social
 
-Esse projeto é um desafio onde é construído um bottom app customizado com flutter.
+link para design de exemplo: [Dribbble - Social meme](https://dribbble.com/shots/14865456-Social-App-Feed-Profile)
 
-<img src="docs/image.gif" alt="navegacao entre as páginas" height="500">
+<img src="docs/navigation.gif" alt="navegacao entre as páginas" height="500">
 
-## Descrição
+| Tela inicial  | Segunda Tela  | 
+|---|---|
+|      <img src="docs/imagem1.png" alt="imagem da tela final" height="400"> |      <img src="docs/imagem2.png" alt="imagem da segunda tela" height="400"> |  
 
-Desafio de construção de um bottom app customizado em flutter. A construção desse projeto está disponível no instagram. E todas as minhas redes estão abaixo para esclarecimento de dúvidas.
+### Descrição
+
+Este projeto é um ui clone de um design disponibilizado pelo no [Dribbble](https://dribbble.com). Esse clone Não está completamente fidedigno pela dificuldade em identificar as fonts, e anexos usados no projeto. Esse projeto foi todo desenvolvido completamente em [flutter](https://flutter.dev).
 
 <p align="left">
   <a href="" alt="Gmail">

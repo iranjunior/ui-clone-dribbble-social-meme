@@ -11,7 +11,7 @@ class ProfilePage extends StatelessWidget {
 
   final User user = User(
     avatarUrl: 'assets/avatar1.jpg',
-    name: 'Chris Allen',
+    name: 'Amanda M Allen',
     followers: 300000,
     posts: [
       Post(

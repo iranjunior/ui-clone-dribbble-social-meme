@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
   final List<User> users = [
     User(
       avatarUrl: 'assets/avatar1.jpg',
-      name: 'Chris Allen',
+      name: 'Amanda M Allen',
       followers: 300000,
       posts: [
         Post(
